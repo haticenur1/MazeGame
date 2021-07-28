@@ -1,0 +1,13 @@
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\bin\Debug\netcoreapp3.1\LabirentOyunu.exe
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\bin\Debug\netcoreapp3.1\LabirentOyunu.deps.json
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\bin\Debug\netcoreapp3.1\LabirentOyunu.runtimeconfig.json
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\bin\Debug\netcoreapp3.1\LabirentOyunu.runtimeconfig.dev.json
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\bin\Debug\netcoreapp3.1\LabirentOyunu.dll
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\bin\Debug\netcoreapp3.1\LabirentOyunu.pdb
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\obj\Debug\netcoreapp3.1\LabirentOyunu.csprojAssemblyReference.cache
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\obj\Debug\netcoreapp3.1\LabirentOyunu.AssemblyInfoInputs.cache
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\obj\Debug\netcoreapp3.1\LabirentOyunu.AssemblyInfo.cs
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\obj\Debug\netcoreapp3.1\LabirentOyunu.csproj.CoreCompileInputs.cache
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\obj\Debug\netcoreapp3.1\LabirentOyunu.dll
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\obj\Debug\netcoreapp3.1\LabirentOyunu.pdb
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\obj\Debug\netcoreapp3.1\LabirentOyunu.genruntimeconfig.cache

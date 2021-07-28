@@ -1,0 +1,13 @@
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\bin\Debug\netcoreapp3.1\MazeGame.exe
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\bin\Debug\netcoreapp3.1\MazeGame.deps.json
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\bin\Debug\netcoreapp3.1\MazeGame.runtimeconfig.json
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\bin\Debug\netcoreapp3.1\MazeGame.runtimeconfig.dev.json
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\bin\Debug\netcoreapp3.1\MazeGame.dll
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\bin\Debug\netcoreapp3.1\MazeGame.pdb
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\obj\Debug\netcoreapp3.1\MazeGame.csprojAssemblyReference.cache
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\obj\Debug\netcoreapp3.1\MazeGame.AssemblyInfoInputs.cache
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\obj\Debug\netcoreapp3.1\MazeGame.AssemblyInfo.cs
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\obj\Debug\netcoreapp3.1\MazeGame.csproj.CoreCompileInputs.cache
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\obj\Debug\netcoreapp3.1\MazeGame.dll
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\obj\Debug\netcoreapp3.1\MazeGame.pdb
+C:\Users\cozum\source\repos\LabirentOyunu\LabirentOyunu\obj\Debug\netcoreapp3.1\MazeGame.genruntimeconfig.cache
