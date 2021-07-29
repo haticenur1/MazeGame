@@ -10,26 +10,40 @@ namespace MazeGame
         public static ConsoleKeyInfo ınfoLeft;
         public static ConsoleKeyInfo ınfoRight;
 
+        public static int endX = 0;
+        public static int endY = 0;
+        public static List<string> coordinatesList = new List<string>();
+
         private Map myMap;
-        private Player players;
+        public static Player players = new Player(0, 1);
+
+        public static string wall = "|";
+        public static string path = " ";
+        public static string finish = "X";
         public void Start()
         {
+            
             string[,] gameMap =
             {
-                {"|","|","|","|","|","|","|","|","|","|","|" },
-                {" "," ","|","|","|"," "," "," "," "," ","|" },
-                {"|"," ","|","|","|","|"," ","|","|"," ","|" },
-                {"|"," "," "," "," "," "," ","|","|"," ","|" },
-                {"|"," ","|"," ","|","|"," ","|","|"," ","|" },
-                {"|"," ","|"," ","|","|"," ","|","|","|","|" },
-                {"|","|","|"," ","|","|"," "," "," "," ","|" },
-                {"|","|","|"," "," ","|","|","|","|"," ","X" },
-                {"|","|","|","|","|","|","|","|","|","|","|" },
+                {wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall },
+                {path,path,wall,wall,wall,path,path,path,path,path,wall },
+                {wall,path,wall,wall,wall,wall,path,wall,wall,path,wall },
+                {wall,path,path,path,path,path,path,wall,wall,path,wall },
+                {wall,path,wall,path,wall,wall,path,wall,wall,path,wall },
+                {wall,path,wall,path,wall,wall,path,wall,wall,wall,wall },
+                {wall,wall,wall,path,wall,wall,path,path,path,path,wall },
+                {wall,wall,wall,path,path,wall,wall,wall,wall,path,finish },
+                {wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall },
 
             };
+            if (Program.menu == 1)
+            {
+                players = new Player(0, 1);
+            }
+            
             myMap = new Map(gameMap);
-            players = new Player(0, 1);
             GameLoop();
+            
         }
         public void DrawFrame()
         {
@@ -48,25 +62,41 @@ namespace MazeGame
 
             if (info.Key == upKey || info.Key == ConsoleKey.UpArrow)
             {
-                if(myMap.Walkable(players.X, players.Y - 1))
+                if(myMap.Walkable(players.X, players.Y - 1)) 
+                { 
                     players.Y -= 1;
+                    endY = players.Y;
+                    Save();
+                }
             }
             if (info.Key == downKey || info.Key == ConsoleKey.DownArrow)
             {
                 if (myMap.Walkable(players.X, players.Y + 1))
+                { 
                     players.Y += 1;
+                    endY = players.Y;
+                    Save();
+                }
             }
 
             if (info.Key == leftKey || info.Key == ConsoleKey.LeftArrow)
             {
-                if (myMap.Walkable(players.X - 1, players.Y ))
+                if (myMap.Walkable(players.X - 1, players.Y))
+                {
                     players.X -= 1;
+                    endX = players.X;
+                    Save();
+                }
             }
 
             if (info.Key == rightKey || info.Key == ConsoleKey.RightArrow)
             {
-                if (myMap.Walkable(players.X + 1, players.Y))
+                if (myMap.Walkable(players.X + 1, players.Y)) 
+                { 
                     players.X += 1;
+                    endX = players.X;
+                    Save();
+                }
             }
             
         }
@@ -94,7 +124,37 @@ namespace MazeGame
             Console.WriteLine(rightkey);
         }
 
-   
+        public void Save()
+        {
+            List<string> coordinates = new List<string>();
+            coordinates.Add(Convert.ToString(endX));
+            coordinates.Add(Convert.ToString(endY));
+            File.WriteAllLines(@"C:\Users\cozum\Desktop\Oyun Kayıt\Kayıt1.txt", coordinates);
+        }
+        public void Load()
+        {
+            StreamReader reader = new StreamReader(@"C:\Users\cozum\Desktop\Oyun Kayıt\Kayıt1.txt");
+            string cordinates ;
+            try
+            {
+                while ((cordinates = reader.ReadLine()) != null)
+                {
+                    coordinatesList.Add(cordinates);
+                }
+                int x = Convert.ToInt32(coordinatesList[0]);
+                int y = Convert.ToInt32(coordinatesList[1]);
+                players.X = x;
+                players.Y = y;
+                reader.Close();
+                Console.Clear();
+                Start();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Kayıtlı oyununuz yok.");
+            }
+           
+        }
        
         private void GameLoop()
         {
@@ -105,7 +165,7 @@ namespace MazeGame
                 HandlePlayerInput();
                 
                 string elementAtPlay = myMap.GetElementAt(players.X,players.Y);
-                if (elementAtPlay == "X")
+                if (elementAtPlay == finish)
                 {
                     Console.WriteLine("\n\nTebrikler kazandınız.");
                     break;

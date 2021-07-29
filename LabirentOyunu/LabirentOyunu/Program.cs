@@ -4,11 +4,12 @@
 namespace MazeGame
 {
     class Program
-    {     
+    {
+        public static int menu;
         static void Main(string[] args)
         {
             Game currentGame = new Game();
-            int menu;
+            
 
             do {
                 Console.WriteLine("\n1-Başla");
@@ -19,11 +20,11 @@ namespace MazeGame
 
                 switch (menu)
                 {
-                    case 1:                        
+                    case 1:
                         currentGame.Start();
                         break;
                     case 2:
-                        Console.WriteLine("Yükle");
+                        currentGame.Load();
                         break;
                     case 3:
                         Console.WriteLine("Ayarlar");

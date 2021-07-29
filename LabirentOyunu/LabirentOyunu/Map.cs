@@ -22,7 +22,7 @@ namespace MazeGame
                 {
                     string element = GameMap[y, x];
                     Console.SetCursorPosition(x, y);
-                    if(element == "X")
+                    if(element == Game.finish)
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
                     }
@@ -44,7 +44,7 @@ namespace MazeGame
                 return false;
             }
 
-            return GameMap[y, x] == " " || GameMap[y, x] == "X";
+            return GameMap[y, x] == Game.path || GameMap[y, x] == Game.finish;
         }
     }
 }
